@@ -31,6 +31,9 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("jump"):
 		apply_impulse(Vector3.UP * jump_force)
+	
+	if Input.is_action_pressed("ui_cancel"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	# Make the pivot follow ball's position (no rotation!)
 	camera_pivot.global_position = global_position
