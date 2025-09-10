@@ -21,7 +21,7 @@ glow_enabled = true
 [node name="Level1" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660255, -0.50000006, -2.1855696e-08, 0, -4.371139e-08, 1, -0.5000001, 0.8660254, 3.7855173e-08, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.50000006, -2.1855696e-08, 0, -4.371139e-08, 1, -0.50000006, 0.8660254, 3.7855173e-08, 0, 111, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -107,7 +107,7 @@ use_collision = true
 size = Vector3(2, 32, 2)
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Chair2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, -7.5, -28.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.499996, -7.5, -28.499996)
 use_collision = true
 size = Vector3(2, 32, 2)
 
@@ -443,8 +443,26 @@ size = Vector3(3, 20, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -13.5, -20.5)
 size = Vector3(3, 20, 2)
 
+[node name="Trash" type="CSGCombiner3D" parent="Environment"]
+transform = Transform3D(5.1, 0, 0, 0, 5.1, 0, 0, 0, 5.1, 256, -23, 58)
+use_collision = true
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Environment/Trash"]
+polygon = PackedVector2Array(0, 0, 0, 5, 2, 5, 1.56, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 10
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Environment/Trash"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1, 0)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0, 5, 2, 5, 1.56, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 10
+
 [node name="CameraPivot" type="Node3D" parent="."]
 script = ExtResource("4_h7jfo")
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-transform = Transform3D(0.999768, -0.0131657, 0.0170456, 0, 0.791416, 0.611278, -0.0215381, -0.611136, 0.791232, 0.0577766, 2.07195, 2.68191)
+transform = Transform3D(0.999768, -0.013165764, 0.017045598, 0, 0.7914161, 0.6112779, -0.0215381, -0.6111361, 0.7912325, 0.0577766, 2.07195, 2.68191)
