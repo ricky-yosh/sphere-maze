@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://dgxb132dvuuwb" path="res://Player/player.gd" id="1_l8h54"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l8h54"]
-bounce = 0.5
+rough = true
+bounce = 0.8
 
 [sub_resource type="SphereMesh" id="SphereMesh_hvfyp"]
 
@@ -11,6 +12,7 @@ bounce = 0.5
 
 [node name="Player" type="RigidBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_l8h54")
+angular_damp = 1.688
 script = ExtResource("1_l8h54")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

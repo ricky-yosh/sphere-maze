@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		apply_impulse(Vector3.UP * jump_force)
 	
+	# Allow for exiting the game
 	if Input.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
