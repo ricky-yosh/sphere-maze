@@ -35,4 +35,4 @@ Complex storyline, character progression, or multiple ball types
 
 ---
 **Controls:** WASD or Arrow Keys for movement, Mouse to look around  
-**Made in:** Godot 4.4
+**Made in:** Godot 4.5
