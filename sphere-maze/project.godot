@@ -15,6 +15,19 @@ run/main_scene="uid://bpdx83ejbwubn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "yellow",
+"res://resources/": "purple",
+"res://scenes/": "red",
+"res://scripts/": "green"
+}
+
 [input]
 
 forward={

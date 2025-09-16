@@ -4,7 +4,7 @@ extends Resource
 
 @export var speed: float = 20.0
 @export var jump_force: float = 5.0
-@export var max_jumps: int = 2
+@export var max_jumps: int = 1
 
 var current_jumps: int = 0
 var is_grounded: bool = false
