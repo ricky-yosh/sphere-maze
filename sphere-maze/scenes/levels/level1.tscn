@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpdx83ejbwubn"]
+[gd_scene load_steps=10 format=3 uid="uid://bpdx83ejbwubn"]
 
 [ext_resource type="Texture2D" uid="uid://db2dha1l8qxif" path="res://assets/textures/room-interior.png" id="1_bfxgj"]
 [ext_resource type="PackedScene" uid="uid://cfwavy460qxuh" path="res://scenes/player/player.tscn" id="2_dywbp"]
 [ext_resource type="Material" uid="uid://b0n7oc6ofd5lv" path="res://assets/textures/test-material.tres" id="3_1seuy"]
-[ext_resource type="Script" uid="uid://wmlv4wktwx81" path="res://scripts/systems/camera_pivot.gd" id="4_2r1tl"]
+[ext_resource type="Script" uid="uid://bqqsunh0cnvlo" path="res://scripts/repository/player_movement_repository.gd" id="3_dywbp"]
+[ext_resource type="Script" uid="uid://wmlv4wktwx81" path="res://scripts/services/camera_pivot_service.gd" id="4_2r1tl"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wfbtj"]
 panorama = ExtResource("1_bfxgj")
@@ -18,6 +19,10 @@ sky = SubResource("Sky_u0yuj")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="Resource" id="Resource_1seuy"]
+script = ExtResource("3_dywbp")
+metadata/_custom_type_script = "uid://bqqsunh0cnvlo"
+
 [node name="Level1" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -27,9 +32,10 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qpwt8")
 
-[node name="Player" parent="." instance=ExtResource("2_dywbp")]
+[node name="Player" parent="." node_paths=PackedStringArray("camera_pivot") instance=ExtResource("2_dywbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5, 0)
-camera_pivot_path = NodePath("../CameraPivot")
+player_movement_data = SubResource("Resource_1seuy")
+camera_pivot = NodePath("../CameraPivot")
 
 [node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, -23.5, -13)
