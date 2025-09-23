@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bpdx83ejbwubn"]
+[gd_scene load_steps=11 format=3 uid="uid://bpdx83ejbwubn"]
 
 [ext_resource type="Texture2D" uid="uid://db2dha1l8qxif" path="res://assets/textures/room-interior.png" id="1_bfxgj"]
 [ext_resource type="PackedScene" uid="uid://cfwavy460qxuh" path="res://scenes/player/player.tscn" id="2_dywbp"]
 [ext_resource type="Material" uid="uid://b0n7oc6ofd5lv" path="res://assets/textures/test-material.tres" id="3_1seuy"]
-[ext_resource type="Script" uid="uid://bqqsunh0cnvlo" path="res://scripts/repository/player_movement_repository.gd" id="3_dywbp"]
-[ext_resource type="Script" uid="uid://wmlv4wktwx81" path="res://scripts/services/camera_pivot_service.gd" id="4_2r1tl"]
+[ext_resource type="Script" uid="uid://bqqsunh0cnvlo" path="res://scripts/player_movement/player_movement_repository.gd" id="3_dywbp"]
+[ext_resource type="Script" uid="uid://c43tww88hpo20" path="res://scripts/spring_arm/spring_arm_controller.gd" id="4_dywbp"]
+[ext_resource type="Resource" uid="uid://ds6wkfblbn3op" path="res://resources/spring_arm_data.tres" id="5_1seuy"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wfbtj"]
 panorama = ExtResource("1_bfxgj")
@@ -514,7 +515,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.5, 0)
 size = Vector3(5, 17, 15)
 
 [node name="CameraPivot" type="Node3D" parent="."]
-script = ExtResource("4_2r1tl")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5, 0)
+script = ExtResource("4_dywbp")
+spring_arm_data = ExtResource("5_1seuy")
 
-[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-transform = Transform3D(0.999768, -0.013165764, 0.017045598, 0, 0.7914161, 0.6112779, -0.0215381, -0.6111361, 0.7912325, 0.0577766, 2.07195, 2.68191)
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+spring_length = 5.0
+margin = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
+transform = Transform3D(0.999768, -0.013165764, 0.017045598, 0, 0.7914161, 0.6112779, -0.0215381, -0.6111361, 0.7912325, 0.0577766, -9.42805, 2.68191)

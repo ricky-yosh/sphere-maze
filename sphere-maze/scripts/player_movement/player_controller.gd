@@ -1,26 +1,22 @@
 extends RigidBody3D
 
+#region Exported Properties
+
 @export var player_movement_data: PlayerMovementRepository
 @export var camera_pivot: Node3D
 
-#region Virtual Methods
+#endregion
 
-func _ready() -> void:
-	_restore_movement_data()
+#region Process & Event Functions
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta) -> void:
 	_capture_player_movement_inputs()
 	_capture_jump_input()
-	_capture_menu_input()
-	_update_camera_pivot()
+	_update_camera_pivot_location()
 
 #endregion
 
 #region Private Methods
-
-func _restore_movement_data() -> void:
-	if not player_movement_data:
-		player_movement_data = PlayerMovementRepository.new()
 
 ## Captures and processes player movement input.
 func _capture_player_movement_inputs() -> void:
@@ -41,16 +37,10 @@ func _capture_player_movement_inputs() -> void:
 func _capture_jump_input() -> void:
 	if Input.is_action_just_pressed("jump"):
 		PlayerMovementService.handle_jump(self, player_movement_data)
-
-## Captures menu input and allows user to use mouse.
-func _capture_menu_input() -> void:
-	if Input.is_action_pressed("ui_cancel"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		
-
-func _update_camera_pivot() -> void:
+## Moves camera pivot to the ball location
+func _update_camera_pivot_location() -> void:
 	if camera_pivot:
-		# Follow the player, no rotation
 		camera_pivot.global_position = global_position
 		
 #endregion
