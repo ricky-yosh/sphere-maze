@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfwavy460qxuh"]
+
+[ext_resource type="Script" uid="uid://narqu5ht0nqa" path="res://actors/player/player.gd" id="1_nvxhs"]
+[ext_resource type="Resource" uid="uid://dgxs7vri6an1t" path="res://data/player_data.tres" id="2_ax26v"]
+[ext_resource type="Script" uid="uid://dnycmvyau3ar7" path="res://components/movement_component/movement_component.gd" id="2_ilk7j"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l8h54"]
+rough = true
+bounce = 0.8
+
+[sub_resource type="SphereMesh" id="SphereMesh_hvfyp"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hvfyp"]
+
+[node name="Player" type="RigidBody3D"]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_l8h54")
+angular_damp = 1.688
+script = ExtResource("1_nvxhs")
+player_data = ExtResource("2_ax26v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_hvfyp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_hvfyp")
+
+[node name="MovementComponent" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_ilk7j")
+metadata/_custom_type_script = "uid://dnycmvyau3ar7"

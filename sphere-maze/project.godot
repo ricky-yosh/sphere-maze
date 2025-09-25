@@ -22,10 +22,10 @@ enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://actors/": "red",
 "res://assets/": "yellow",
-"res://resources/": "purple",
-"res://scenes/": "red",
-"res://scripts/": "green"
+"res://components/": "green",
+"res://data/": "purple"
 }
 
 [filesystem]

@@ -1,6 +1,0 @@
-[gd_resource type="Resource" script_class="SpringArmRepository" load_steps=2 format=3 uid="uid://ds6wkfblbn3op"]
-
-[ext_resource type="Script" uid="uid://dxyx17vq85ahn" path="res://scripts/spring_arm/spring_arm_repository.gd" id="1_2l4cu"]
-
-[resource]
-script = ExtResource("1_2l4cu")

@@ -1,4 +1,4 @@
-class_name SpringArmRepository
+class_name ThirdPersonCameraData
 extends Resource
 
 @export var mouse_sensitivity = 0.0015
