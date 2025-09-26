@@ -26,8 +26,9 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qpwt8")
 
-[node name="Player" parent="." instance=ExtResource("2_dywbp")]
+[node name="Player" parent="." node_paths=PackedStringArray("camera_pivot") instance=ExtResource("2_dywbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5, 0)
+camera_pivot = NodePath("../CameraPivot")
 
 [node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, -23.5, -13)

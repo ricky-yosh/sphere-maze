@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfwavy460qxuh"]
+[gd_scene load_steps=8 format=3 uid="uid://cfwavy460qxuh"]
 
 [ext_resource type="Script" uid="uid://narqu5ht0nqa" path="res://actors/player/player.gd" id="1_nvxhs"]
 [ext_resource type="Resource" uid="uid://dgxs7vri6an1t" path="res://data/player_data.tres" id="2_ax26v"]
 [ext_resource type="Script" uid="uid://dnycmvyau3ar7" path="res://components/movement_component/movement_component.gd" id="2_ilk7j"]
+[ext_resource type="Script" uid="uid://c43tww88hpo20" path="res://components/third_person_camera_component/third_person_camera_component.gd" id="4_lsqbn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l8h54"]
 rough = true
@@ -25,7 +26,12 @@ mesh = SubResource("SphereMesh_hvfyp")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_hvfyp")
 
-[node name="MovementComponent" type="Node" parent="."]
+[node name="MovementComponent" type="Node3D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_ilk7j")
 metadata/_custom_type_script = "uid://dnycmvyau3ar7"
+
+[node name="ThirdPersonCameraComponent" type="Node3D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_lsqbn")
+metadata/_custom_type_script = "uid://c43tww88hpo20"

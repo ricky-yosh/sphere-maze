@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://c43tww88hpo20" path="res://components/third_person_camera_component/third_person_camera_component.gd" id="1_1qbqe"]
 
-[node name="ThirdPersonCameraComponent" type="Node"]
+[node name="ThirdPersonCameraComponent" type="Node3D"]
 script = ExtResource("1_1qbqe")

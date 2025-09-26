@@ -4,15 +4,17 @@
 [ext_resource type="Script" uid="uid://bqqsunh0cnvlo" path="res://actors/player/player_data.gd" id="2_re8e7"]
 [ext_resource type="Script" uid="uid://dxyx17vq85ahn" path="res://components/third_person_camera_component/third_person_camera_component_data.gd" id="3_f1dyv"]
 
-[sub_resource type="Resource" id="Resource_re8e7"]
+[sub_resource type="Resource" id="Resource_dhxet"]
 script = ExtResource("1_dhxet")
 metadata/_custom_type_script = "uid://b4ranqpviad37"
 
 [sub_resource type="Resource" id="Resource_q2hic"]
 script = ExtResource("3_f1dyv")
+clamp_min = -30
+clamp_max = 90
 metadata/_custom_type_script = "uid://dxyx17vq85ahn"
 
 [resource]
 script = ExtResource("2_re8e7")
-input_movement_data = SubResource("Resource_re8e7")
+movement_data = SubResource("Resource_dhxet")
 third_person_camera_data = SubResource("Resource_q2hic")
