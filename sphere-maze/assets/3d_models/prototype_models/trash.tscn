@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bvhqi2wrx74jx"]
+[gd_scene format=3 uid="uid://bbvhghiwqmg2u"]
 
 [node name="Trash" type="Node3D"]
 transform = Transform3D(5.1, 0, 0, 0, 5.1, 0, 0, 0, 5.1, 0, 0, 0)
