@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bfm2ulcmdidns"]
+
+[node name="Lamp" type="Node3D"]
+
+[node name="Base" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -23.03125, 0)
+radius = 14.0
+height = 1.1875
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.375, 0)
+radius = 1.912
+height = 70.75
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(3.4, 0, 0, 0, 3.4, 0, 0, 0, 3.4, 0, 48, 0)
+polygon = PackedVector2Array(0, -1, 0, 4, 1, 4, 3, 2, 4, -1)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 8

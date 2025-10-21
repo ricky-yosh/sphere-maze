@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpuvr6f6mxg02"]
-
-[ext_resource type="Script" uid="uid://dnycmvyau3ar7" path="res://components/movement_component/movement_component.gd" id="1_13ywc"]
-
-[node name="InputMovement" type="Node3D"]
-script = ExtResource("1_13ywc")

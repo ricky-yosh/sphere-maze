@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cf7uhdlvq4252"]
+
+[node name="Chair2" type="Node3D"]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 9.5, -0.5)
+use_collision = true
+size = Vector3(28, 2, 2)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -7.5, -0.5)
+use_collision = true
+size = Vector3(2, 32, 2)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, -7.5, -0.5)
+use_collision = true
+size = Vector3(2, 32, 2)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, -7.5, -28.5)
+use_collision = true
+size = Vector3(2, 32, 2)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.499996, -7.5, -28.499996)
+use_collision = true
+size = Vector3(2, 32, 2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 9.5, -28.5)
+use_collision = true
+size = Vector3(28, 2, 2)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, -15.5, 9, -14.5)
+use_collision = true
+size = Vector3(4, 29, 26)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(2.9802322e-08, -1.0000001, 0, 1.0000001, 2.9802322e-08, 0, 0, 0, 1, -0.023578644, -2.1081471, -14.5)
+use_collision = true
+size = Vector3(4, 31, 26)
