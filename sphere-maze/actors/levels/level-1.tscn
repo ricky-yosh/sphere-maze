@@ -9,12 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://bfm2ulcmdidns" path="res://assets/3d-models/prototype-models/lamp.tscn" id="8_w4mvd"]
 [ext_resource type="PackedScene" uid="uid://d3lrhr55gvxkd" path="res://assets/3d-models/prototype-models/carpet.tscn" id="9_3krgs"]
 [ext_resource type="PackedScene" uid="uid://662ragbnvwd3" path="res://assets/3d-models/prototype-models/wall.tscn" id="10_abaoe"]
-[ext_resource type="PackedScene" uid="uid://31yt688jqicp" path="res://assets/3d-models/prototype-models/table.tscn" id="11_ehlrp"]
 [ext_resource type="PackedScene" uid="uid://bbvhghiwqmg2u" path="res://assets/3d-models/prototype-models/trash.tscn" id="12_kyjg2"]
 [ext_resource type="PackedScene" uid="uid://bbsdfwjrh0m6b" path="res://assets/3d-models/prototype-models/book-1.tscn" id="13_vrid2"]
 [ext_resource type="PackedScene" uid="uid://cyev1hkurrwtu" path="res://assets/3d-models/prototype-models/book-2.tscn" id="14_ji2dm"]
 [ext_resource type="PackedScene" uid="uid://b6kbws2ahqe1" path="res://assets/3d-models/prototype-models/book-3.tscn" id="15_qawb3"]
 [ext_resource type="PackedScene" uid="uid://ics78wisucgr" path="res://assets/3d-models/release-models/bookshelf/bookshelf.glb" id="16_3krgs"]
+[ext_resource type="PackedScene" uid="uid://mtxmf8dlsy73" path="res://assets/3d-models/release-models/table/table.glb" id="16_43eeu"]
 [ext_resource type="PackedScene" uid="uid://m4tlepwvn4ko" path="res://assets/3d-models/prototype-models/book-4.tscn" id="16_lqauy"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wfbtj"]
@@ -68,9 +68,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 60)
 [node name="Wall" parent="Environment" instance=ExtResource("10_abaoe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 60)
 
-[node name="Table" parent="Environment" instance=ExtResource("11_ehlrp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 30)
-
 [node name="Trash" parent="Environment" instance=ExtResource("12_kyjg2")]
 transform = Transform3D(5.1, 0, 0, 0, 5.1, 0, 0, 0, 5.1, 256, -23, 58)
 
@@ -88,6 +85,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.5, 33, 101)
 
 [node name="Bookshelf" parent="Environment" instance=ExtResource("16_3krgs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 180.5, 0, 80)
+
+[node name="table" parent="Environment" instance=ExtResource("16_43eeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.130943, 7.1456356, 66.12312)
 
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5, 0)
